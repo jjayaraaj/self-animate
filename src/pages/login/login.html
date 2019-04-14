@@ -1,0 +1,60 @@
+<ion-header >
+    <ion-navbar hideBackButton color="primary" >
+    
+      <ion-title>
+        <img src="assets/imgs/logo.png"  height="22" alt="">
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+<ion-content padding class="bg-image no-scroll" no-bounce>
+  <div style="width:95%; margin:auto;">
+  <p >LOGIN TO YOUR ACCOUNT USING</p>
+  <div text-center>
+      <img src="assets/imgs/facebook.jpg" class="fb-button" alt="">
+
+     <img src="assets/imgs/google.jpg" class="google-button" alt="">
+ </div>
+
+
+  <div class="" padding-top >
+    <ion-list no-lines   >
+      <ion-item  class="label animated fadeInLeft item-remove-animate" >
+          <ion-icon ios="ios-person" md="md-person" item-start ></ion-icon>
+        <ion-input type="text" placeholder="Enter Username" ></ion-input>
+      </ion-item>
+
+      <ion-item  class="label" >
+          <ion-icon  ios="ios-key" md="md-key" item-start ></ion-icon>
+        <ion-input type="password" placeholder="Enter Password"></ion-input>
+      </ion-item>
+    </ion-list>
+  </div>
+
+  <ion-grid>
+      <ion-row>
+        <ion-col col-6>
+            <button class="btn-width" ion-button color="primary"  round (click)="onClickLogin();">
+                Login
+              </button>
+        </ion-col>
+        <ion-col>
+         <p>Forgot Password?</p> 
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+
+  <div text-center style="border-top:solid 1px #000; padding-top:3vh;"  >
+      
+      <p class="text" text-center>Don't have an account?</p>
+    <button class="my-button" ion-button color="light" round>
+      REGISTER ACCOUNT
+    </button>
+    
+  </div>
+ 
+
+  
+
+</div>
+</ion-content>

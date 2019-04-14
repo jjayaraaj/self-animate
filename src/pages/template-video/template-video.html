@@ -1,0 +1,72 @@
+<ion-header >
+    <ion-navbar  color="primary" >
+        <ion-title>
+            <img src="assets/imgs/logo.png"  height="22" alt="">
+          </ion-title>
+          <ion-title>
+             
+            </ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only menuToggle>
+          <ion-icon  name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+    
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content no-padding>
+    <div style="position:absolute; right:0;">
+        <button ion-button icon-only clear>
+            <ion-icon name="heart"></ion-icon>
+          </button>
+      </div>
+    <div no-padding no-margin style="background: #eee;">
+  <img src="https://via.placeholder.com/450x250" style="height:40vh; width: 100%;" alt="">  
+    <ion-row>
+      <ion-col col-10><p padding no-margin >Shapes Of Business [ 10134 ]</p></ion-col>
+      <ion-col>
+        <div style="position:relative;">
+            <ion-fab top right edge style="top:1%;">
+                <button ion-fab mini><ion-icon name="add"></ion-icon></button>
+                <ion-fab-list>
+                  <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+                  <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+                </ion-fab-list>
+              </ion-fab> 
+        </div>
+        
+      </ion-col>
+    </ion-row>
+    
+  </div>
+  <div padding-top text-center padding-bottom>
+    <button ion-button color="primary"   round (click)="onClickCustomization()">START CUSTOMIZATION </button>
+    </div>
+  
+
+  <div style="border-top:solid 1px #eee;" padding>
+    <h6 no-padding no-margin padding-bottom>Keywords</h6>
+    <ion-badge color="secondary" outline>Showcase</ion-badge>
+    <ion-badge color="secondary" outline>Showcase</ion-badge>
+    <ion-badge color="secondary" outline>Showcase</ion-badge>
+    <ion-badge color="secondary" outline>Showcase</ion-badge>
+  </div>
+  <div style="border-top:solid 1px #eee;" padding>
+      <h6 no-padding no-margin padding-bottom>Description</h6>
+      <p no-margin>Dummy Text</p>
+    </div>
+
+    <div style="border-top:solid 1px #eee;" padding>
+        <h6 no-padding no-margin padding-bottom>Comments</h6>
+        <p no-margin>Dummy Text</p>
+      </div>
+
+  
+
+ 
+  
+</ion-content>

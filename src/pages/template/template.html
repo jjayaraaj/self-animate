@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+   
+    <ion-title *ngIf="!isSearchOpened"><img src="assets/imgs/logo.png"  height="22" alt=""></ion-title>
+    <ion-searchbar *ngIf="isSearchOpened"></ion-searchbar>
+    <ion-buttons right >
+      <button ion-button icon-only *ngIf="!isSearchOpened" (click)="isSearchOpened=true" ><ion-icon name="search"></ion-icon></button>
+      <button ion-button icon-only *ngIf="isSearchOpened" (click)="isSearchOpened=false"><ion-icon name="close"></ion-icon></button>
+      <button ion-button icon-only *ngIf="!isSearchOpened"><ion-icon name="notifications"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+  
+
+<ion-content no-padding>
+  <ion-grid>
+    <ion-row >
+      <ion-col col-8>
+        <h5 no-padding no-margin>Business Templates  </h5>
+      </ion-col>
+      <ion-col text-right>
+        FILTER <ion-icon ios="ios-funnel" md="md-funnel" (click)="presentPopover($event)"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+
+  <ion-row >
+    <ion-col   col-6 *ngFor="let num of [1,2,3,4,5,6]"  >
+      <div style="background:#eee; position: relative;">
+        <ion-badge color="secondary" style="position:absolute; top:30px; right:0;">Credits 2</ion-badge>
+      <img src="https://via.placeholder.com/450x450" style="width: 100%; " alt="">
+      
+      <p class="title" >New Year Wishes</p>
+      <ion-row>
+        <ion-col col-6>
+          <button ion-button small color="primary" (click)="onClickVideo()">Use</button>
+        </ion-col>
+        <ion-col col-6 text-right>
+          <button ion-button small color="secondary" (click)="onClickDemo()">Demo</button>
+        </ion-col>
+      </ion-row>
+    </div>
+     
+    </ion-col>
+
+    <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+        <ion-infinite-scroll-content></ion-infinite-scroll-content>
+      </ion-infinite-scroll>
+  </ion-row>
+
+
+</ion-content>

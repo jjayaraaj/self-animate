@@ -1,0 +1,132 @@
+<ion-header >
+        <ion-navbar  color="primary" >
+            <ion-title>
+                <img src="assets/imgs/self-animate-icon.png"  height="30" alt="">
+              </ion-title>
+              <ion-title>
+                 
+                </ion-title>
+          <ion-buttons right>
+            <button ion-button icon-only menuToggle>
+              <ion-icon  name="more"></ion-icon>
+            </button>
+          </ion-buttons>
+        
+        </ion-navbar>
+      </ion-header>
+
+
+<ion-content>
+        <div no-padding no-margin style="background: #eee;">
+            <img src="https://via.placeholder.com/450x250" style="height:30vh; width: 100%;" alt="">
+            <p padding no-margin >Shapes Of Business [ 10134 ]</p>
+        </div>
+
+       
+
+    <ion-list>
+        <ion-list-header>
+           <strong> Music</strong>
+        </ion-list-header>
+        <ion-item>
+            <ion-label >Default</ion-label>
+            <ion-select  [(ngModel)]="defaultMusicCategory" >
+                <ion-option value="default">Default</ion-option>
+                <ion-option value="georgia">No Audio</ion-option>
+                <ion-option value="georgiaBold">Demo</ion-option>
+                <ion-option value="tahoma">Jingles</ion-option>
+                <ion-option value="verdana">Cinematic</ion-option>
+                <ion-option value="verdana">EMD</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item>
+            <ion-label >New year wishes</ion-label>
+            <ion-select  [(ngModel)]="defaultMusicName" >
+                <ion-option value="default">Default</ion-option>
+            </ion-select>
+        </ion-item>
+        <ion-item text-left>
+            <button ion-button outline color="primary" icon-end>Play Audio
+                <ion-icon ios="ios-play" md="md-play"></ion-icon>
+            </button>
+        </ion-item>
+      </ion-list>
+
+      <ion-list>
+          <ion-list-header>
+              <strong>Voice Over (Optional)</strong>
+          </ion-list-header>
+          <ion-item>
+              <ion-label >Default-Blank</ion-label>
+              <ion-select  [(ngModel)]="voicec" >
+                  <ion-option value="default">Default - Blank</ion-option>
+              </ion-select>
+          </ion-item>
+          
+          <ion-item text-left>
+              <button ion-button outline color="primary" icon-end>Play Voice Over
+                  <ion-icon ios="ios-play" md="md-play"></ion-icon>
+              </button>
+          </ion-item>
+           <ion-item>
+              <ion-label >Record Voice Over</ion-label>
+            </ion-item>
+          
+          <ion-item text-left>
+              <button ion-button outline color="primary" icon-end>Start Recording
+                  <ion-icon ios="ios-mic" md="md-mic"></ion-icon>
+              </button>
+          </ion-item>
+        </ion-list>
+
+
+        <ion-list>
+            <ion-list-header>
+                <strong>  </strong>
+            </ion-list-header>
+            <ion-item>
+                <ion-label >Select Video Quality</ion-label>
+                <ion-select  [(ngModel)]="quality" >
+                    <ion-option value="default">Low</ion-option>
+                    <ion-option value="default">Medium</ion-option>
+                    <ion-option value="default">High</ion-option>
+                </ion-select>
+            </ion-item>
+            
+            <ion-item >
+                <ion-label >Select Privacy</ion-label>
+                    <ion-select  [(ngModel)]="privacy" >
+                        <ion-option value="default">Public</ion-option>
+                        <ion-option value="default">Private</ion-option>
+                        <ion-option value="default">Invite Only</ion-option>
+                    </ion-select>
+                
+            </ion-item>
+
+            <ion-item >
+                <ion-label >Email scheduler</ion-label>
+                    <ion-select  [(ngModel)]="scheduler" >
+                        <ion-option value="default">No</ion-option>
+                        <ion-option value="default">Yes</ion-option>
+                        <ion-option value="default">Invite Only</ion-option>
+                    </ion-select>
+                
+            </ion-item>
+
+            <ion-item >
+                    <ion-input type="text" placeholder="Enter Video Name"></ion-input>
+                
+            </ion-item>
+
+          </ion-list>
+          <div style="background:#eee;" no-padding padding-vertical text-center>
+                <button ion-button small round>Generate Video preview</button>
+            </div>
+          <ion-row padding-horizontal>
+               
+              <ion-col text-center>
+                    <button ion-button color="primary"  round icon-end (click)="onClickMakeVideo()"> Make Video <ion-icon name="arrow-forward" ></ion-icon></button>
+              </ion-col>
+            </ion-row>
+         
+</ion-content>

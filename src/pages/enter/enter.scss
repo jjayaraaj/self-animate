@@ -1,0 +1,31 @@
+page-enter {
+    .bg-image{
+        background-image: url('../assets/imgs/main-bg.png');
+        background-repeat: no-repeat;
+        background-position: center bottom;
+        background-size: contain;
+        background-color: #3d3db9;
+    }
+
+    .no-scroll{
+        overflow: hidden;
+    }
+
+    .logo{
+        display: block;
+        width: 70%;
+        margin: auto;
+        margin-top: 10vh;
+       
+    }
+
+    h6{color: #fff;}
+
+    .div-button{width:50%; margin: auto; padding-top:15vh;}
+
+    .btn-width{
+        width: 90%;
+        background-color:transparent;
+        color:#fff; 
+    }
+}

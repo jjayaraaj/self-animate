@@ -1,0 +1,7 @@
+{
+  "name": "self-animate",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

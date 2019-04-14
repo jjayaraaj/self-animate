@@ -1,0 +1,86 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <ion-buttons left menuToggle>
+          <button ion-button icon-only>
+            <ion-icon name="menu"></ion-icon>
+          </button>
+      </ion-buttons>
+      <ion-title > <img src="assets/imgs/logo.png"  height="22" alt=""></ion-title>
+     
+      <ion-buttons right >
+        <button ion-button icon-only *ngIf="!isSearchOpened"><ion-icon name="notifications"></ion-icon></button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+  <div >
+  <ion-grid class="bg-blue"  >
+    <ion-row>
+      <ion-col text-center class="text-white">
+        What would you like to create today?
+      </ion-col>
+     
+    </ion-row>
+    <ion-row>
+        <ion-col>
+            <ion-searchbar></ion-searchbar>
+          </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <p class="text-white">Popular Searches</p>
+          <ion-badge class="badge-blue">Wedding</ion-badge>
+          <ion-badge class="badge-blue">Invitation</ion-badge>
+          <ion-badge class="badge-blue">Logo</ion-badge>
+          <ion-badge class="badge-blue">Wishes</ion-badge>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+
+
+
+<div>
+   
+    <ion-scroll scrollX="true" style="white-space:nowrap; height: 200px;">
+      <img src="assets/imgs/make-business-video.jpg" class="main-image" (click)="onClickBusiness()" alt="">
+      <img src="assets/imgs/personal-video.jpg" class="main-image" alt="">
+      <img src="assets/imgs/free-video.jpg" class="main-image" alt="">
+  </ion-scroll>
+</div>
+<hr>
+<h4>Our recent templates</h4>
+
+
+<div>
+   
+    <ion-scroll scrollX="true" style="width:100vw; height:250px" >
+        <ion-row nowrap class="headerChip">
+          <ion-col col-7 *ngFor="let template of templateItems">
+              <div style="background:#eee; position: relative;">
+                  <ion-badge color="secondary" style="position:absolute; top:30px; right:0;">Credits {{template.credits}}</ion-badge>
+                <img [src]="template.template_image" style="width: 100%; " alt="">
+                
+                <p class="title" text-center >{{template.template_name}}</p>
+                <ion-row>
+                  <ion-col col-6>
+                    <button ion-button small class="button-blue" (click)="onClickUse()"  >Use</button>
+                  </ion-col>
+                  <ion-col col-6 text-right>
+                    <button ion-button small class="button-green" (click)="onClickDemo(template.youtube_code)" >Demo</button>
+                  </ion-col>
+                </ion-row>
+              </div>
+          </ion-col>
+          <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+              <ion-infinite-scroll-content></ion-infinite-scroll-content>
+            </ion-infinite-scroll>
+        </ion-row>
+      </ion-scroll>
+</div>
+  
+
+  
+</ion-content>
